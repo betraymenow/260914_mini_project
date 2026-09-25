@@ -1,0 +1,13 @@
+# 환경 변수 (API 키 포함 — 절대 커밋하지 않음)
+mini_project/.env
+
+# 가상환경 / IDE 설정
+mini_project/.venv/
+mini_project/.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# 강의 영상 (저작권 문제로 제외 — 개인 로컬 보관용)
+*.mp4

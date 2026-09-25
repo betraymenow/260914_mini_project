@@ -1,0 +1,26 @@
+### health check
+GET http://localhost:8003/health
+
+### 정상 호출 (핵심 질문)
+POST http://localhost:8003/chat/stream
+Content-Type: application/json
+
+{
+  "message": "FastAPI에서 APIRouter를 쓰는 이유가 뭐야?"
+}
+
+### 도메인 밖 질문 (거절 확인)
+POST http://localhost:8003/chat/stream
+Content-Type: application/json
+
+{
+  "message": "오늘 저녁 메뉴 뭐 먹을지 추천해줘"
+}
+
+### 잘못된 입력 (422 확인)
+POST http://localhost:8003/chat/stream
+Content-Type: application/json
+
+{
+  "message": ""
+}
