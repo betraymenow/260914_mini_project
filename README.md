@@ -64,6 +64,10 @@ mini_project/
 
    또는 브라우저에서 `http://localhost:8003/docs` (Swagger UI)로 바로 테스트할 수 있습니다.
 
+## 더 읽어보기
+
+- [API 키로 외부 LLM(Claude)을 가져와 작동시키는 과정](docs/api-key-mechanism.md) — OpenAI SDK 호환 계층이 요청/응답을 어떻게 번역하는지, 실제 코드 어느 부분이 담당하는지 정리한 문서
+
 ## 주요 기능
 
 - **스트리밍 응답**: `/chat/stream`이 토큰을 실시간으로 흘려보내며, 응답 끝에 `[DONE]` / `[EMPTY]` / `[ERROR]` 마커를 붙입니다.

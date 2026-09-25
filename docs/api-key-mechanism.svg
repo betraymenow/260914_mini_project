@@ -1,0 +1,43 @@
+<svg width="680" height="400" viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>API 키는 요청을 보낼 때 함께 나가고, 발전소 도착 즉시 검사된다</title>
+<desc>API 키 게이트는 요청이 나가는 선(오른쪽 집에서 왼쪽 발전소로) 위, 발전소 바로 앞에 위치한다. 검사를 통과해야만 발전소가 응답을 생성하며, 돌아오는 응답 선에는 별도 게이트가 없다</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="680" height="400" fill="#FFFFFF"/>
+
+<!-- 발전소 (Claude 모델) -->
+<rect x="50" y="170" width="130" height="110" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<rect x="95" y="100" width="22" height="70" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<circle cx="115" cy="225" r="28" fill="#EF9F27" opacity=".55"/>
+<text x="115" y="302" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A" font-family="sans-serif">Claude 모델</text>
+<text x="115" y="320" text-anchor="middle" font-size="12" fill="#5F5E5A" font-family="sans-serif">실제 추론이 일어나는 곳</text>
+
+<!-- 우리 집 (FastAPI 서비스) -->
+<polygon points="425,170 500,100 575,170" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<rect x="430" y="170" width="140" height="110" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<circle cx="430" cy="270" r="8" fill="#EF9F27"/>
+<text x="500" y="302" text-anchor="middle" font-size="14" font-weight="500" fill="#2C2C2A" font-family="sans-serif">우리 FastAPI 서비스</text>
+<text x="500" y="320" text-anchor="middle" font-size="12" fill="#5F5E5A" font-family="sans-serif">받은 응답을 사용자에게 전달</text>
+
+<!-- 질문 요청 (나가는 선, 게이트를 거침) -->
+<line x1="430" y1="200" x2="350" y2="200" stroke="#5F5E5A" stroke-width="1.5" opacity=".7"/>
+<line x1="250" y1="200" x2="180" y2="200" stroke="#5F5E5A" stroke-width="1.5" opacity=".7" marker-end="url(#arrow)"/>
+<text x="390" y="185" text-anchor="middle" font-size="12" fill="#5F5E5A" font-family="sans-serif">질문 요청</text>
+
+<!-- API 키 게이트 -->
+<rect x="250" y="176" width="100" height="48" rx="10" fill="#FAEEDA" stroke="#BA7517" stroke-width="0.5"/>
+<text x="300" y="196" text-anchor="middle" font-size="14" font-weight="500" fill="#633806" font-family="sans-serif">API 키</text>
+<text x="300" y="214" text-anchor="middle" font-size="12" fill="#854F0B" font-family="sans-serif">여기서 인증 확인</text>
+
+<!-- 응답 토큰 스트림 (게이트 없이 직행) -->
+<line x1="180" y1="270" x2="430" y2="270" stroke="#BA7517" stroke-width="3" stroke-linecap="round" fill="none" marker-end="url(#arrow)"/>
+
+<!-- 사용자에게 전달 -->
+<line x1="570" y1="270" x2="605" y2="270" stroke="#5F5E5A" stroke-width="1.5"/>
+<circle cx="627" cy="258" r="9" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<path d="M611,288 Q627,266 641,288 Z" fill="#F1EFE8" stroke="#888780" stroke-width="1"/>
+<text x="627" y="306" text-anchor="middle" font-size="12" fill="#5F5E5A" font-family="sans-serif">사용자</text>
+</svg>
